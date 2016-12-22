@@ -1,0 +1,76 @@
+name: OtxPlugin
+version: 2.5.6
+description: For 0tx
+authors: [flash1110]
+main: me.flash1110.Otxplugin.OtxPlugin
+
+commands:
+  region:
+    description: REgion command
+    usage: /<command> [args]
+  list:
+    description: List command
+    usage: /<command>
+    aliases: [playerlist, playerwho, who]
+  menu:
+    permission: chatcolor.use
+    description: Open up a menu
+    usage: /<command>
+    aliases: [menucolor, colormenu, color, ncolor, ccolor, colour]
+  randomcolor:
+    description: Random Color chat
+    usage: /<command>
+    aliases: [colorrandom, random, rc]
+  staff:
+    description: Staff chat command
+    usage: /<command> [message]
+    aliases: [staffchat, sc, chatstaff]
+  creload:
+    description: Reload command
+    usage: /<command>
+  donation:
+    description: A command for la cow
+    usage: /<command> [args]
+  nick:
+    description: La nick command
+    usage: /<command>
+    aliases: [nickname, flashnick]
+  donategoal:
+    description: Another command for la cow
+    usage: /<command> [args]
+  bonus:
+    description: Bonus command
+    usage: /<command> [usage]
+    aliases: [boost, bonuspoints, boostpoints]
+  modcast:
+    permission: empireplugin.modcast
+    description: Broadcast a message
+    usage: /<command> <msg...>
+    aliases: [mc, mcast]
+  macro:
+    description: Macro toggle
+    usage: /<command> [on|off]
+    aliases: [macrotoggle, cps, cpstoggle]
+  say:
+    permission: empireplugin.say
+    description: Broadcast a message
+    usage: /<command> <msg...>
+    aliases: [esay]
+  
+  chatcolor:
+    permission: chatcolor.use
+    description: Use ChatColor
+    usage: /<command> [args]
+    aliases: [cc, chatcolour]
+  namecolor:
+    permission: chatcolor.use
+    description: Changes your Name Color
+    usage: /<command>
+    aliases: [nc, namecolour]
+permissions:
+  empireplugin.*:
+    description: Duke and fly bypass
+    children:
+      empireplugin.end: true
+      chatcolor.use: true
+    default: op
