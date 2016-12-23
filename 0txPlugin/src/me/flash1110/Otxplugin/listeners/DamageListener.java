@@ -116,21 +116,23 @@ public class DamageListener implements Listener {
 				Player Damaged = (Player) DamagedE;
 				
 				
-				if (Damager.isFlying())
+				if (Damager.getAllowFlight()) {
 					Damager.setFlying(false);
 				
-				Damager.setAllowFlight(false);
+					Damager.setAllowFlight(false);
 				
-				Damager.sendMessage(ChatColor.RED + "Flymode disabled in combat");
+					Damager.sendMessage(ChatColor.RED + "Flymode disabled in combat");
+				
+				}
 				
 				
-				
-				if (Damaged.isFlying())
+				if (Damaged.getAllowFlight()) {
 					Damaged.setFlying(false);
 			
 					Damaged.setAllowFlight(false);
 			
 					Damaged.sendMessage(ChatColor.RED + "Flymode disabled in combat");
+				}
 				
 			}
 			
