@@ -181,6 +181,18 @@ public class JoinListener implements Listener {
 					event.setCancelled(true);
 				}
 			}
+			
+			
+		if (event.getBlock().getWorld().getEnvironment() == Environment.NETHER) {	
+			if (!event.getPlayer().hasPermission("0txplugin.build.bypass")) {
+			
+				if (event.getBlock().getLocation().getY() >= 127) {
+					event.setCancelled(true);
+				
+					event.getPlayer().sendMessage(ChatColor.RED + "You cannot build above the nether!");
+				}
+			}
+		}
 	}
 	
 	@EventHandler
