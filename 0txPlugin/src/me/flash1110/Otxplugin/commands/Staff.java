@@ -64,6 +64,6 @@ public class Staff implements CommandExecutor {
 				ChatColor.GOLD + ChatColor.BOLD + "] " + 
 				ChatColor.BLUE + name + ChatColor.WHITE + "> " + ChatColor.YELLOW + message; 
 		
-		Bukkit.getServer().broadcast(format, "empireplugin.staffchat")	
+		Bukkit.getServer().broadcast(format, "empireplugin.staffchat");
 	}
 }
