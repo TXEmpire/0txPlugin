@@ -299,7 +299,7 @@ public class DamageListener implements Listener {
 				
 				for (ProtectedRegion region : regions) {
 					
-					if (region.getId().equalsIgnoreCase("warzone"))
+					if (region.getId().equalsIgnoreCase("warzone") || region.getId().equalsIgnoreCase("kingoftheladder"))
 						return;
 					
 				}
