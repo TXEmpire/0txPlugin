@@ -305,6 +305,7 @@ public class ChatColorListener implements Listener {
 		
 		if (cplayer.getStaffChat() && player.hasPermission("0txplugin.staffchat")) {
 			Staff.sendMessage(event.getMessage(), player.getDisplayName());;
+			event.setMessage("");
 			event.setCancelled(true);
 			return;
 		}
